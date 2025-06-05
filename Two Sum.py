@@ -34,7 +34,6 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         # Brute Force
 
-        # dict = {}
         # for i in range(0, len(nums)):
         #     for j in range(i+1, len(nums)):
         #         if nums[i] + nums[j] == target:
@@ -47,6 +46,7 @@ class Solution:
             if target - num in dict:
                 return [dict[target-num], i]
             dict[num] = i
+     
 
 sol = Solution()
 nums = [2, 7, 11, 15]
