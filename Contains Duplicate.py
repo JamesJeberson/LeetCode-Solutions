@@ -23,6 +23,8 @@
 # 1 <= nums.length <= 105
 # -109 <= nums[i] <= 109
 
+######################################################################################################################################33
+
 from typing import List
 
 class Solution:
@@ -51,3 +53,5 @@ sol = Solution()
 nums = [1,2,3,1]
 result = sol.hasDuplicate(nums)
 print("Result:", result)
+
+
