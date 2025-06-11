@@ -52,7 +52,7 @@ class Solution:
 
         #-------------------------------------------------------------
 
-        # Similar to above using collections.defaultdict()
+        # Better solution than above using collections.defaultdict() 
 
         # anagrams = defaultdict(list)
         # for s in strs:
@@ -62,6 +62,20 @@ class Solution:
         # return list(anagrams.values())
 
         #-------------------------------------------------------------
+
+        # Hash table 
+        # O(m*n)
+        
+        res = defaultdict(list)
+
+        for s in strs:
+            count = [0]*26
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+
+            res[tuple(count)].append(s)
+
+        return list(res.values())
 
 sol = Solution()
 strs = ["act","pots","tops","cat","stop","hat"]
